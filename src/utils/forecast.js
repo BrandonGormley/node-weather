@@ -11,7 +11,7 @@ const forecast = (latitude, longitude, callback) => {
     } else {
       callback(
         undefined,
-        `In ${body.location.name} it is currently ${body.current.temperature} degres`
+        `In ${body.location.name} it is currently ${body.current.temperature} degrees, with a ${body.current.precip}% chance of rain.`
       );
     }
   });
