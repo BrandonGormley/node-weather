@@ -5,9 +5,8 @@ const hbs = require('hbs'); // Requires hbs
 const geocode = require('./utils/geocode');
 const forecast = require('./utils/forecast');
 
-const port = 3000; // Assigns port to 3000
-
 const app = express(); // Calls express into app (default behavior)
+const port = process.env.PORT || 3000; // Heroku Port OR Local 3000
 
 // Define paths for Express config
 const publicDirectoryPath = path.join(__dirname, '../public'); // Creates our path to use for express.static
